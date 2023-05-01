@@ -8,6 +8,7 @@ import { NewBook } from "./pages/NewBook";
 import { NotFound } from "./pages/NotFound";
 import { BookLayout } from "./BookLayout";
 import { BookRoutes } from "./BookRoutes";
+import "./style.css";
 
 function App() {
   // let element = useRoutes([
@@ -25,19 +26,12 @@ function App() {
       <nav>
         <ui>
           <li>
-            <NavLink
-              style={({ isActive }) => {
-                return isActive ? { color: "red" } : {};
-              }}
-              to="/"
-            >
-              {({ isActive }) => {
-                return isActive ? "Active Home" : "Home";
-              }}
-            </NavLink>
+            <NavLink to="/">home</NavLink>
           </li>
           <li>
-            <NavLink to="/books">Books</NavLink>
+            <NavLink end to="/books">
+              Books
+            </NavLink>
           </li>
         </ui>
       </nav>
